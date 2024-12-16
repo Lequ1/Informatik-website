@@ -1,0 +1,52 @@
+
+/*! locomotive-scroll v3.1.7 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+    overflow: hidden;
+  }
+
+html.has-scroll-dragging,
+html.has-scroll-dragging * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html, body {
+    overflow: hidden; /* Verhindert normales Scrollen */
+
+}
+
+.fadeIn {
+    opacity: 1 !important;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+
+
+.snowflake_selfcreated {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    animation: fall 10s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.bg-foto {
+    background-image: url("../media/image.png");
+}
+
+[data-scroll-container] {
+    overflow: hidden; /* Wichtig für smooth scrolling */
+  }
+  
