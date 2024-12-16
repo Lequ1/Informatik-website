@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Käserennen</title>
+    <link rel="icon" href="./static/media/der_kaese.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"/> <!-- Für die Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Für die Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.5/dist/locomotive-scroll.min.css"> <!-- Locomotive Scroll CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/styles/style.css">
+    <script src="static/js/tailwind_config.js"></script>
+    <script src="static/js/script.js"></script>
+    <link rel="stylesheet" href="static/styles/snow.css">
+    <script src="static/js/snow.js" defer></script>
+</head>
+<body class="" style='font-family: Lexend, "Noto Sans", sans-serif;' data-scroll-container>
+    <div id="start" class="px-48 h-screen bg-foto bg-cover bg-center text-white" data-scroll-section data-scroll-speed="2" data-scroll-class="fadeIn"> <!-- Bis content screen height und 48rem padding zum Bildschirmrand -->
+        <div id="snow" data-scroll-section data-scroll-speed="2"></div>
+        <header id="header" class="w-full px-10 py-3 text-white">
+            <div class="flex grid grid-cols-2 items-center">
+                <div name="Left Side" class="flex items-center space-x-2">
+                    <img src="static/media/der_kaese.png" class="w-auto h-16">
+                    <span class="text-lg font-semibold">Käserennen</span>
+                </div>
+                <div name="Right Site" class="flex justify-end space-x-9 items-center">
+                    <a href="#" data-scroll-to class="text-sm font-medium hover:underline underline-offset-8 nav-link">Start</a>
+                    <a href="#erklaerung" data-scroll-to class="text-sm font-medium hover:underline underline-offset-8 nav-link">Erklärung</a>
+                    <a href="#sportler" data-scroll-to class="text-sm font-medium hover:underline underline-offset-8 nav-link">Berühmte Sportler</a>
+                    <a href="#ikone" data-scroll-to class="text-sm font-medium hover:underline underline-offset-8 nav-link">Die Ikone</a>
+                    <button id="toggleButton" class="borderd py-2 px-5 bg-yellow-500 rounded-lg">Schnee - Aus</button>
+                </div>
+            </div>
+        </header>
+        <!-- Content -->
+        <div class="min-h-[750px] flex justify-center items-center">
+            <div class="flex flex-col items-center">
+                <span class="text-9xl font-semibold">Käserennen</span>
+                <span class="text-4xl mt-0">Der Wettlauf um den Käse</span>
+            </div>
+        </div>
+    </div>
+    <!-- Erklärung -->
+    <div class="h-[110vh] flex section bg-white" data-scroll-section id="erklaerung">
+        <div class="flex justify-center items-center min-h-max"> <!-- Maybe noch bg-gray-100 p-10, mit anderem Padding-->
+            <div class="text-black px-96 grid grid-cols-2 snap-start" name="Erklärung">
+                <div class="flex flex-col" name="title and subtitle" data-scroll data-scroll-speed="2"> <!-- Collum 1 -->
+                    <span class="text-4xl font-semibold">Über die Sportart</span>
+                    <span class="text-xl">Erklärung</span>
+                </div>
+                <div class="" data-scroll data-scroll-speed="3"> <!-- Collum 2 -->
+                    <p>
+                        <span class="font-semibold text-3xl">K</span>äserollen ist ein traditionelles, ungewöhnliches Rennen, das jedes Jahr in Gloucestershire, England, stattfindet. Dabei rollen Teilnehmer einen großen, runden Käselaib einen steilen Hügel hinunter, während sie ihm hinterherlaufen, um ihn zu fangen. Der Käse, der oft ein großer Double Gloucester-Käse ist, kann dabei Geschwindigkeiten von bis zu 110 km/h erreichen. Der erste, der den Hügel hinunterkommt, gewinnt.
+                    </p><p class="mt-3"> 
+                        Das Rennen hat eine lange Geschichte und geht auf das Mittelalter zurück. Es hat sich seitdem zu einem beliebten, aber gefährlichen Event entwickelt, bei dem sich die Teilnehmer oft schwere Verletzungen zuziehen. Trotz dieser Risiken zieht das Cheese Rolling jedes Jahr Tausende von Zuschauern an, die das Spektakel live miterleben möchten. Die Veranstaltung ist bekannt für ihre lustige, chaotische Atmosphäre und wird sowohl von Einheimischen als auch von Touristen gerne besucht.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Champions -->
+    <div class="h-[110vh] flex justify-center items-center bg-black text-white section scroll-container" data-scroll-section id="sportler">
+        <div class="flex flex-col w-2/3" data-scroll data-scroll-speed="3">
+            <span class="text-4xl font-semibold m-auto">Berühmtesten Sportler</span>
+            <span class="text-xl font-light m-auto mb-12">Top - 4</span>
+            <div class="flex grid grid-cols-4 justify-center space-x-8 text-black">
+                <div class="bg-white p-4 rounded" data-scroll-speed="1">
+                    <div class="h-64 overflow-hidden" id="image_container">
+                        <img src="static/media/anderson.png" class="rounded w-full h-full object-cover" alt="Chris Anderson">
+                    </div>
+                        <div class="mt-4" name="text">
+                        <div class="justify-between items-center flex mb-1">
+                            <h1 class="font-semibold">Chris Anderson</h1>
+                            <h1 class="font-light text-sm">23 Siege</h1>
+                        </div>
+                        <p>Der unangefochtene Meister des Käserennens.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded" data-scroll-speed="1">
+                    <div class="h-74 overflow-hidden" id="image_container">
+                        <img src="static/media/Stephen-Gyde.png" class="rounded w-full h-full object-cover" alt="Stephen-Gyde">
+                    </div>
+                    <div class="mt-4" name="text">
+                        <div class="justify-between items-center flex mb-1">
+                            <h1 class="font-semibold">Stephen Gyde</h1>
+                            <h1 class="font-light text-sm">21 Siege</h1>
+                        </div>
+                        <p>Stephen Gyde war der einzige Teilnehmer bis 1999, der alle drei Männer-Rennen zweimal gewonnen hat.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded" data-scroll-speed="2">
+                    <div class="h-74 min-w-max overflow-hidden" id="image_container">
+                        <img src="static/media/izzy_john.jpg" class="rounded w-full h-full object-cover" alt="izzy_john">
+                    </div>
+                    <div class="mt-4" name="text">
+                        <div class="justify-between items-center flex mb-1">
+                            <h1 class="font-semibold">Islwyn "Izzy" John</h1>
+                            <h1 class="font-light text-sm">13 Siege</h1>
+                        </div>
+                        <p>Izzy gewann sein erstes Rennen 1957 und holte sich in diesem Jahr zwei Käse, im Alter von 14 Jahren.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded" data-scroll-speed="2">
+                    <div class="h-74 overflow-hidden" id="image_container">
+                        <img src="static/media/Ryan Fairley.png" class="rounded w-full h-full object-cover" alt="Ryan Fairley">
+                    </div>
+                    <div class="mt-4" name="text">
+                        <div class="justify-between items-center flex mb-1">
+                            <h1 class="font-semibold">Ryan Fairley</h1>
+                            <h1 class="font-light text-sm">5 Siege</h1>
+                        </div>
+                        <p>Ryan Fairley ist ein mehrfacher Sieger des Käserennens, obwohl er Käse nicht mag.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white w-full justify-end flex mt-6">
+                <span class="text-[13px] font-light">Stand etwa 2020, nach Wikipedia Historie</span>
+            </div>
+        </div>
+    </div>
+    <!-- Ikone -->
+    <div class="h-[110vh] flex justify-center items-center bg-gray-50 text-black section" data-scroll-section id="ikone">
+        <div class="flex flex-col w-2/4" data-scroll data-scroll-speed="3">
+            <span class="text-5xl font-semibold m-auto">Chris Anderson</span>
+            <span class="text-2xl font-light m-auto">Die Ikone der Sportart</span>
+            <div class="flex grid grid-cols-2 space-x-12 mt-12">
+                <div id="bild_der_ikone" class="flex flex-col space-y-6 mt-4">
+                    <img class="rounded-lg shadow-md" src="https://i2-prod.gloucestershirelive.co.uk/news/uk-world-news/article9307451.ece/ALTERNATES/s1200b/0_swns_cheese_rolling_24.jpg" alt="">
+                    <p class=""><span class="font-semibold">Chris Anderson</span> ist eine Ikone des Cheese-Rollings. Mit seinen zahlreichen Siegen hat er sich den Titel 
+                        als unangefochtener Meister verdient. Seine unglaubliche Geschwindigkeit und Entschlossenheit haben
+                        das Event weltweit berühmt gemacht.</p>
+                </div>
+                <div class="">
+                        <table class="table-auto border-collapse border border-black text-black w-full mt-4">
+                            <thead>
+                                <tr>
+                                    <th class="border border-black px-4 py-2">Jahr</th>
+                                    <th class="border border-black px-4 py-2">Anzahl an gewonnen<br>Meisterschafter</th>
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2005</td>
+                                    <td class="border border-black px-4 py-2">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2006</td>
+                                    <td class="border border-black px-4 py-2">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2007</td>
+                                    <td class="border border-black px-4 py-2">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2008</td>
+                                    <td class="border border-black px-4 py-2">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2009</td>
+                                    <td class="border border-black px-4 py-2">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2010</td>
+                                    <td class="border border-black px-4 py-2">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2011</td>
+                                    <td class="border border-black px-4 py-2">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2012</td>
+                                    <td class="border border-black px-4 py-2">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2015</td>
+                                    <td class="border border-black px-4 py-2">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2016</td>
+                                    <td class="border border-black px-4 py-2">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2017</td>
+                                    <td class="border border-black px-4 py-2">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2018</td>
+                                    <td class="border border-black px-4 py-2">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-4 py-2">2022</td>
+                                    <td class="border border-black px-4 py-2">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="flex justify-center items-center h-32 w-full bg-black text-white -mb-1 space-x-5" data-scroll-section> <!-- negatives margin, damit durch smooth scroll keine weiße linie entsteht -->
+        <script>
+            $('.test').on('click', function(){
+                e.preventDefault();
+                $('body').load($(this).attr('href'));
+            })
+        </script>
+        <span>© 2024</span>
+        <a href="impressum.html" class="hover:underline underline-offset-8">Impressum</a>
+        <a href="sources.html" class="hover:underline underline-offset-8">Quellendokument</a>
+    </footer>
+
+<!-- https://www.cheese-rolling.co.uk/competitors_roll_of_honour.html
+ https://en.wikipedia.org/wiki/Chris_Anderson_(cheese_roller)
+ OpenAi
+ https://en.wikipedia.org/wiki/Cooper%27s_Hill_Cheese-Rolling_and_Wake#Multiple_winners
+ https://de.wikipedia.org/wiki/K%C3%A4serennen
+ https://www.bitesizedbritain.co.uk/the-coopers-hill-cheese-rolling-and-wake-is-an-annual1/
+ https://sickhistory.com/coopers-hill-cheese-rolling/
+ https://kinute.com/stories/645418813-chasing-the-cheese-the-long-history-of-cheese-rolling-and-cheese-making-in-gloucestershire
+ -->
+</body>
+</html>
